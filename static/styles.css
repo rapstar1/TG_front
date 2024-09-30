@@ -1,0 +1,172 @@
+/* 基础样式 */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+/* 容器样式 */
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    padding: 0;
+    text-align: center;
+}
+
+/* 标签按钮部分 */
+.tab-container {
+    display: flex;
+    justify-content: space-around;
+    background-color: #333;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+.tab-button {
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+    background-color: #1f1f1f;
+    color: white;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.tab-button:last-child {
+    margin-right: 0;
+}
+
+.tab-button.active {
+    background-color: #000;
+}
+
+.tab-button:hover {
+    background-color: #555;
+}
+
+/* 顶部菜单样式 */
+.menu {
+    display: flex;
+    justify-content: space-around;
+    background-color: white;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+    flex-wrap: nowrap; /* 确保图标不会换行 */
+}
+
+.menu-item {
+    text-align: center;
+    flex: 1; /* 确保每个图标占据相等的宽度 */
+    max-width: 25%; /* 每个图标的最大宽度 */
+}
+
+.icon {
+    font-size: 24px;
+    color: #333;
+}
+
+p {
+    margin-top: 5px;
+    font-size: 12px;
+    color: #333;
+}
+
+/* 钱包部分样式 */
+.wallet-section {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wallet-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.wallet-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 25px;
+    font-size: 16px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.wallet-btn:hover {
+    background-color: #0056b3;
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* 钱包信息显示部分 */
+#walletInfo {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#walletInfo p {
+    color: #333;
+}
+
+/* 底部导航栏 */
+.footer-menu {
+    display: flex;
+    justify-content: space-around;
+    background-color: #f8f9fa;
+    padding: 10px 0;
+    border-top: 1px solid #ddd;
+    position: fixed; /* 修复底部导航固定在页面底部 */
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-item {
+    text-align: center;
+    flex: 1;
+}
+
+.footer-icon {
+    font-size: 22px;
+    color: #333;
+}
+
+.footer-item p {
+    font-size: 12px;
+    margin-top: 5px;
+    color: #333;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .wallet-buttons {
+        flex-direction: column;
+    }
+
+    .wallet-btn {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .icon {
+        font-size: 20px;
+    }
+
+    .menu-item {
+        max-width: 100%; /* 在手机上，确保图标占满可用空间 */
+    }
+}
